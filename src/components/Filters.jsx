@@ -8,12 +8,12 @@ export default function Filters({ filters, setFilters, genres, years }) {
   };
 
   return (
-    <div className="flex flex-wrap items-center gap-4 text-sm">
+    <div className="flex flex-wrap items-center gap-4 text-sm text-stone-800">
       <select
         name="genre"
         value={filters.genre}
         onChange={handleChange}
-        className="bg-gray-800 text-white px-3 py-2 rounded-lg border border-gray-700 focus:outline-none"
+        className="bg-[#e6dcce] text-stone-900 px-3 py-2 rounded-lg border border-[#d2c2b0] focus:outline-none"
       >
         <option value="all">Todos los géneros</option>
         {genres.map((g) => <option key={g} value={g}>{g}</option>)}
@@ -23,7 +23,7 @@ export default function Filters({ filters, setFilters, genres, years }) {
         name="year"
         value={filters.year}
         onChange={handleChange}
-        className="bg-gray-800 text-white px-3 py-2 rounded-lg border border-gray-700 focus:outline-none"
+        className="bg-[#e6dcce] text-stone-900 px-3 py-2 rounded-lg border border-[#d2c2b0] focus:outline-none"
       >
         <option value="all">Todos los años</option>
         {years.map((y) => <option key={y} value={y}>{y}</option>)}
@@ -39,7 +39,7 @@ export default function Filters({ filters, setFilters, genres, years }) {
           step="0.5"
           value={filters.minRating}
           onChange={handleChange}
-          className="bg-gray-800 text-white px-2 py-1 w-16 rounded border border-gray-700 text-center"
+          className="bg-[#e6dcce] text-stone-900 px-2 py-1 w-16 rounded-lg border border-[#d2c2b0] text-center focus:outline-none"
         />
       </label>
 
@@ -51,7 +51,7 @@ export default function Filters({ filters, setFilters, genres, years }) {
           onChange={handleChange}
           className="w-4 h-4 accent-red-600 rounded"
         />
-        <span>Solo favoritas </span>
+        <span>Solo favoritas ⭐</span>
       </label>
     </div>
   );

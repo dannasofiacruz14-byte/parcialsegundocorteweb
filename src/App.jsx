@@ -41,15 +41,16 @@ export default function App() {
     return matchesQuery && matchesGenre && matchesYear && matchesRating && matchesFavs;
   });
 
-  // En App.jsx
-const selectedMovie = movies.find((m) => Number(m.id) === Number(selectedId));
+  const selectedMovie = movies.find((m) => Number(m.id) === Number(selectedId));
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white p-6">
+    /* Fondo principal: Beige / Crema Claro (bg-[#fbf8f3] o bg-amber-50) */
+    <div className="min-h-screen bg-[#f7f3ec] text-stone-900 p-6">
       <div className="max-w-6xl mx-auto space-y-6">
         <Header query={query} setQuery={setQuery} />
         
-        <div className="flex flex-wrap justify-between items-center bg-gray-900 p-4 rounded-xl gap-4 border border-gray-800">
+        {/* Contenedor de Filtros claro con borde suave */}
+        <div className="flex flex-wrap justify-between items-center bg-[#eae2d6] p-4 rounded-xl gap-4 border border-[#dbd0be] shadow-sm">
           <Filters filters={filters} setFilters={setFilters} genres={genres} years={years} />
           <Favorites count={favorites.length} />
         </div>
